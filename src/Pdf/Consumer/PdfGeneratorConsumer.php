@@ -55,7 +55,7 @@ class PdfGeneratorConsumer
             $response = $this->apiConsumer
                 ->post('?' . $query, [
                     'form_params' => [
-                        'html' => '<html><body>Hello world!</body></html>',
+                        'html' => $html,
                     ]
                     // 'border' => '5mm',
                     // 'footerHeight' => $options['footerHeight'] ?? '0mm',
