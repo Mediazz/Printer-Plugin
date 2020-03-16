@@ -56,10 +56,10 @@ class PdfGeneratorConsumer
                 ->post('?' . $query, [
                     'form_params' => [
                         'html' => $html,
-                    ]
-                    // 'border' => '5mm',
-                    // 'footerHeight' => $options['footerHeight'] ?? '0mm',
-                    // 'headerHeight' => $options['headerHeight'] ?? '0mm',
+                    ],
+                    'border' => '5mm',
+                    'footerHeight' => $options['footerHeight'] ?? '0mm',
+                    'headerHeight' => $options['headerHeight'] ?? '0mm',
                 ]);
         } catch (GuzzleException $exception) {
             throw new NoPdfReturnedException($exception->getMessage());
